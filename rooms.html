@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Rooms</title>
+     <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Scroll Animation -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+  
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    </style>
+</head>
+<body>
+
+
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top shadow">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="images/logo.jpg" alt="Royal Place Logo" class="me-2" style="height:50px;">
+        <span class="fw-bold">Royal Stay</span>
+      </a>
+
+      <!-- Toggle button for mobile -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Menu Items -->
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-home"></i> Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+          <li class="nav-item"><a class="nav-link" href="rooms.html"><i class="fas fa-bed"></i> Rooms</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html"><i class="fas fa-concierge-bell"></i> Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ <div class="container py-5">
+    <h1 class="text-center mb-5 animate__animated animate__fadeInDown">Our Rooms</h1>
+    <div class="row g-4">
+
+      <!-- Room Card -->
+      <div class="col-md-4">
+        <div class="room animate__animated">
+          <img src="images/room1.jpg" alt="Deluxe Room">
+          <div class="p-3">
+            <h4>Deluxe Room</h4>
+            <p class="price">$120 / night</p>
+            <p class="stars">⭐⭐⭐⭐☆</p>
+            <p>Spacious room with modern amenities, perfect for couples.</p>
+            <button class="btn book-btn w-100" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Room Card -->
+      <div class="col-md-4">
+        <div class="room animate__animated">
+          <img src="images/room2.jpg" alt="Executive Room">
+          <div class="p-3">
+            <h4>Executive Room</h4>
+            <p class="price">$180 / night</p>
+            <p class="stars">⭐⭐⭐⭐⭐</p>
+            <p>Luxury executive room with work desk and premium view.</p>
+            <button class="btn book-btn w-100" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Room Card -->
+      <div class="col-md-4">
+        <div class="room animate__animated">
+          <img src="images/room3.jpg" alt="Suite Room">
+          <div class="p-3">
+            <h4>Suite Room</h4>
+            <p class="price">$250 / night</p>
+            <p class="stars">⭐⭐⭐⭐⭐</p>
+            <p>Exclusive suite with living area and private balcony view.</p>
+            <button class="btn book-btn w-100" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Now</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Booking Modal -->
+
+  <!-- Booking Modal -->
+<div class="modal fade" id="bookingModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content text-dark">
+      <div class="modal-header">
+        <h5 class="modal-title">Book Your Stay</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form id="bookingForm">
+          <input type="text" class="form-control mb-3" placeholder="Full Name" required>
+          <input type="email" class="form-control mb-3" placeholder="Email" required>
+          <input type="date" class="form-control mb-3" required>
+          <input type="date" class="form-control mb-3" required>
+          <button type="submit" class="btn btn-success w-100">Confirm Booking</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ✅ Toast (isko modal ke baad, script se pehle add karo) -->
+<div id="bookingToast" class="toast align-items-center text-bg-success border-0 position-fixed bottom-0 end-0 m-3" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="d-flex">
+    <div class="toast-body">
+      ✅ Booking confirmed successfully!
+    </div>
+    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+  </div>
+</div>
+
+  
+
+</body>
+
+ <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <!-- Bootstrap Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom Script -->
+  <script src="script.js"></script>
+
+</html>

@@ -1,0 +1,412 @@
+/* ===================== GLOBAL RESET ===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background-color: #f8f8f8;
+  line-height: 1.6;
+}
+
+/* ===================== NAVBAR ===================== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(184, 14, 14, 0.893);
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar-nav .nav-link {
+  transition: all 0.3s ease;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 8px;
+}
+.navbar-nav .nav-link:hover {
+   background-color: #ffffff22; /* halka sa background hover pe */
+  color: #00ff88 !important;   /* hover pe text ka rang */
+  transform: scale(1.1);       /* thoda zoom effect */
+
+}
+
+
+.navbar .logo img {
+  height: 60px;
+  width: auto;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+/* Default (mobile pe same rahega) */
+.navbar .navbar-brand {
+  margin-left: 0;
+}
+
+/* Desktop screens (768px+ pe thoda aur left le jao) */
+@media (min-width: 1024px) {
+  .navbar .navbar-brand {
+    margin-left: -70px;
+  }
+}
+
+
+/* .navbar a:hover {
+  color: #2bb804d7;
+} */
+
+/* ===================== HERO (Homepage) ===================== */
+
+
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+              url("images/hotel1.jpg") center/cover no-repeat;
+}
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+
+/* ===================== ANIMATION ===================== */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===================== CUSTOMER REVIEW ===================== */
+.customer-review {
+  background-color: #fafafa;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.customer-review blockquote {
+  font-style: italic;
+  color: #666;
+  max-width: 700px;
+  margin: auto;
+}
+
+.customer-review span {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #222;
+}
+
+/* ===================== ABOUT SECTION ===================== */
+.about-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("images/h5.jpg") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.about-content {
+  text-align: center;
+  max-width: 1200px;
+}
+
+.about-content h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.about-content p {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.feature-box {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 25px;
+  border-radius: 15px;
+  width: 280px;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
+}
+
+.feature-box i {
+  font-size: 36px;
+  margin-bottom: 12px;
+  color: #f5c518;
+}
+
+.feature-box h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+/* ===================== ROOMS SECTION ===================== */
+ body {
+  position: relative;
+  min-height: 100vh;
+  background: url("images/background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.6); /* opacity control */
+  z-index: -1; /* neeche rahega */
+}
+
+    .room {
+      background: #fff;
+      color: #333;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    .room:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(167, 95, 40, 0.6);
+    }
+    .room img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .price {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #a75f28;
+    }
+    .stars {
+      color: gold;
+    }
+    .book-btn {
+      background: #28a745;
+      color: #fff;
+      border-radius: 50px;
+      padding: 8px 20px;
+      transition: all 0.3s ease;
+    }
+    .book-btn:hover {
+      background: #218838;
+      transform: scale(1.1);
+    }
+
+/* Service page */
+
+/* Services Section */
+
+/* Services Section */
+
+
+.heading {
+        text-align: center;
+        padding: 50px 20px;
+        background: linear-gradient(135deg, #362c18, #211202),
+                    url('images/hotel-bg.jpg') center/cover no-repeat;
+        color: white;
+        font-size: 2.5em;
+        font-weight: bold;
+        letter-spacing: 2px;
+      }
+
+      .service-card {
+        background: #fff;
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        overflow: hidden;
+        transition: all 0.4s ease-in-out;
+        margin-bottom: 30px;
+      }
+
+      .service-card:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+      }
+
+      .service-card img {
+        width: 100%;
+        height: 230px;
+        object-fit: cover;
+        border-bottom: 5px solid #198754;
+      }
+
+      .service-card-body {
+        padding: 20px;
+      }
+
+      .service-card-body h5 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #198754;
+      }
+
+      .btn-explore {
+        background: #198754;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 50px;
+        color: white;
+        font-weight: 500;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .btn-explore:hover {
+        background: #145c38;
+        transform: scale(1.05);
+      }
+       
+      /*  for add to cart */
+
+      #cartModal .modal-header {
+  background: linear-gradient(45deg, #f39c12, #e67e22);
+  color: white;
+}
+
+#cartList .list-group-item {
+  font-size: 1rem;
+}
+
+#cartList .removeBtn {
+  font-size: 0.8rem;
+}
+
+
+/* ===================== CONTACT SECTION ===================== */
+
+#contact {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+#contact header {
+  background: linear-gradient(135deg, #362c18, #211202);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 40px 20px;
+  gap: 40px;
+}
+
+.contact-info,
+.contact-form {
+  flex: 1 1 400px;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.contact-info h2,
+.contact-form h2 {
+  margin-bottom: 20px;
+  color: #211202;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.info-item i {
+  color: #211202;
+  font-size: 1.5rem;
+  margin-right: 15px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #211202;
+  box-shadow: 0 0 5px rgba(40, 24, 1, 0.3);
+}
+
+button[type="submit"] {
+  background: #a75f287b;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background: #211202;
+}
+
+/* ===================== FOOTER ===================== */
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  margin-top: 40px;
+}
+

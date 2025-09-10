@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Services</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Scroll Animation -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body>
+
+
+
+   <header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top shadow">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="images/logo.jpg" alt="Royal Place Logo" class="me-2" style="height:50px;">
+        <span class="fw-bold">Royal Stay</span>
+      </a>
+
+      <!-- Toggle button for mobile -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Menu Items -->
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-home"></i> Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+          <li class="nav-item"><a class="nav-link" href="rooms.html"><i class="fas fa-bed"></i> Rooms</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html"><i class="fas fa-concierge-bell"></i> Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+   <!-- ================= HEADER ================= -->
+<header class="heading animate__animated animate__fadeInDown py-4 bg-dark text-white">
+  <div class="container d-flex justify-content-between align-items-center">
+    <h2 class="m-0">Our Premium Services</h2>
+
+    <!-- 🛒 Cart Button -->
+    <button id="openCartBtn" class="btn btn-warning position-relative" data-bs-toggle="modal" data-bs-target="#cartModal">
+      <i class="fa-solid fa-cart-shopping"></i> Cart
+      <span id="cartCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+        0
+      </span>
+    </button>
+  </div>
+</header>
+
+
+    <!-- ================= HEADER ================= -->
+    <!-- <header class="heading animate__animated animate__fadeInDown text-center py-4">
+      <h2>Our Premium Services</h2>
+    </header> -->
+
+    <!-- ================= SERVICES SECTION ================= -->
+    <div class="container py-5" id="services">
+      <div class="row g-4">
+        
+        <!-- Spa & Wellness -->
+        <div class="col-lg-4 col-md-6">
+          <div class="service-card">
+            <img src="images/spa.jpg" alt="Spa & Wellness">
+            <div class="service-card-body text-center">
+              <h5><i class="fa-solid fa-spa me-2"></i> Spa & Wellness</h5>
+              <p>Relax and refresh your senses with our luxurious spa treatments.</p>
+              <button class="btn btn-explore" data-service="spa">Explore More</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dining Experience -->
+        <div class="col-lg-4 col-md-6">
+          <div class="service-card">
+            <img src="images/dining.jpg" alt="Dining Experience">
+            <div class="service-card-body text-center">
+              <h5><i class="fa-solid fa-utensils me-2"></i> Dining Experience</h5>
+              <p>Enjoy gourmet meals and curated cuisines in a serene setting.</p>
+              <button class="btn btn-explore" data-service="dining">Explore More</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Travel & Tours -->
+        <div class="col-lg-4 col-md-6">
+          <div class="service-card">
+            <img src="images/tour.jpg" alt="Travel & Tours">
+            <div class="service-card-body text-center">
+              <h5><i class="fa-solid fa-plane-departure me-2"></i> Travel & Tours</h5>
+              <p>Discover local attractions and guided tours to make your stay unforgettable.</p>
+              <button class="btn btn-explore" data-service="tour">Explore More</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ================= SERVICE DETAILS MODAL ================= -->
+    <div class="modal fade" id="serviceModal" tabindex="-1">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content text-dark">
+          <div class="modal-header bg-success text-white">
+            <h5 class="modal-title" id="serviceModalLabel"></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <img id="serviceImage" class="img-fluid mb-3 rounded" alt="Service Image">
+            <h4 id="serviceTitle"></h4>
+            <p id="serviceDescription"></p>
+          </div>
+          <div class="modal-footer">
+            <button id="addToCartBtn" class="btn btn-success">
+              <i class="fa-solid fa-cart-plus"></i> Add to Cart
+            </button>
+            <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= CART MODAL ================= -->
+    <div class="modal fade" id="cartModal" tabindex="-1">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content text-dark">
+          <div class="modal-header bg-warning">
+            <h5 class="modal-title"><i class="fa-solid fa-cart-shopping"></i> Your Cart</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <ul id="cartList" class="list-group mb-3"></ul>
+            <h5 class="text-end">Total: <span id="cartTotal">₹0</span></h5>
+          </div>
+          <div class="modal-footer">
+            <button id="clearCartBtn" class="btn btn-danger">Clear Cart</button>
+            <button class="btn btn-success">Proceed to Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= JS ================= -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
